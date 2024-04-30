@@ -32,8 +32,8 @@ const List = () => {
             </tr>
           </thead>
           <tbody>
-            {data.map((item) => (
-              <tr key={item.id}>
+            {data.map((item, index) => (
+              <tr key={index}>
                 <td className="border px-4 py-2">{item.Nation}</td>
                 <td className="border px-4 py-2">{item.Population}</td>
               </tr>
