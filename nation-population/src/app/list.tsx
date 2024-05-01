@@ -2,9 +2,12 @@
 import React, { useEffect, useState } from 'react';
 import fetchData from './fetch';
 
-
+interface PopulationData {
+  Nation: string;
+  Population: number;
+}
 const List = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<PopulationData[]>([]);
 
   useEffect(() => {
     const fetchApiData = async () => {
